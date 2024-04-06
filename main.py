@@ -3,8 +3,8 @@
 # WIFI CONNECTION
 import network
 
-ssid = 'BESTstation'
-password = '0816592535'
+ssid = 'INSERT SSID WIFI'
+password = 'INSERT WIFI PASSWORD'
 
 sta_if = network.WLAN(network.STA_IF)
 
@@ -19,7 +19,7 @@ print('network config:', sta_if.ifconfig())
 
 from linenotify import Linenotify_API
 
-Lmsg =  Linenotify_API("bd4mjCdTA9fbeG34gzGfbpLOQK5fU0ZzSX0DfegOoah")
+Lmsg =  Linenotify_API("INSERT LINE TOKEN")
 
 Lmsg.lineNotify(sta_if.ifconfig())
 
