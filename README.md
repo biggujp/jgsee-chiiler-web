@@ -8,6 +8,7 @@ I do deployed on ESP32 microcontrollers used by Micropython.
     ├── 📄 boot.py                          // run system file
     ├── 📄 main.py                          // Main source code file
     ├── 📄 JGSmod.py                        // Modbus API source code file
+    ├── 📄 linenotify.py                    // Linenotify API source code file
     └── 📄 README.md
 
 ## 🔨 Config
