@@ -15,14 +15,13 @@ I do deployed on ESP32 microcontrollers used by Micropython.
 - 1st open app.py : edit SSID and SSID_PASSWORD 
 
   ```sh
-  SSID = "INSERT YOUR NAME WIFI"
-  SSID_PASSWORD = "INSERT YOUR WIFIPASSWORD"
+  ssid = 'INSERT YOUR SSID WIFI'
+  password = 'INSERT YOUR WIFI PASSWORD'
   ```
 
 - 2nd Line edit : TOKEN of  LineNotify
-
   ```sh
-  token = 'INSERT YOUR TOKEN'
+  Lmsg =  Linenotify_API("INSERT YOUR TOKEN")
   ```
 
 Enjoy and funny :smiley:
