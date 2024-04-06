@@ -1,4 +1,4 @@
-# jgsee-chiiler-webserver
+# jgsee-chiller-webserver
 
 This repository contains the code for control Chiller of Emerson. but assembled by RITCHAI
 
