@@ -13,7 +13,7 @@ I do deployed on ESP32 microcontrollers used by Micropython.
     └── 📄 README.md
 
 ## 🔨 Config
-- 1st open app.py : edit SSID and SSID_PASSWORD 
+- 1st open main.py : edit ssid and password 
 
   ```sh
   ssid = 'INSERT YOUR SSID WIFI'
