@@ -1,6 +1,6 @@
 # jgsee-chiller-webserver
 
-This repository contains the code for control Chiller of Emerson. but assembled by RITCHAI
+This repository contains the code for control Chiller of Emerson. but assembled by RITCHAI.
 
 I do deployed on ESP32 microcontrollers used by Micropython.
 
