@@ -20,7 +20,6 @@ print('network config:', sta_if.ifconfig())
 # ****************************
 # ****************************
 # LINE NOTIFY IF IP ADDRESS CHANGE OR ONLINE
-
 from linenotify import Linenotify_API
 
 Lmsg =  Linenotify_API("bd4mjCdTA9fbeG34gzGfbpLOQK5fU0ZzSX0DfegOoah")
@@ -80,7 +79,6 @@ def web_page():
     gpio_state="ON"
   else:
     gpio_state="OFF"
-
   
   html = """
 <html><head> <title>JGSEE Chiller Web Server</title> <meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="10">
