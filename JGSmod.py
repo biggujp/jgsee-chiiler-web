@@ -20,17 +20,15 @@ class  JGSmodbus_API() :
 		self.sladdr=sladdr
 		
 # 03  host.read_holding_registers
-#slave_addr=1, starting_addr=8734, register_qty=1, signed=False
 	def read_sensor(self,startaddr,regqty,signed):
 		try :
 			sensor_status = host.read_holding_registers(slave_addr=self.sladdr, starting_addr=startaddr, register_qty=regqty, signed=signed)
-			return sensor_status #Tuple[int, … ]
+			return sensor_status 
 		except :
 			pass 	
 
 
 # 06 host.write_single_register
-#slave_addr=1, register_address=8731,register_value=1, signed=False  #register_value=0 OFF , register_value=1 ON
 	def cmd_order(self,regaddr,regvalue,signed):
 		try:
 			on_status = host.write_single_register(slave_addr=self.sladdr, register_address=regaddr, register_value=regvalue, signed=signed)
