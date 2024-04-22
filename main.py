@@ -3,8 +3,8 @@
 # WIFI CONNECTION
 import network
 
-ssid = 'INSERT YOUR SSID WIFI'
-password = 'INSERT YOUR WIFI PASSWORD'
+ssid = 'BESTstation'
+password = '0816592535'
 
 sta_if = network.WLAN(network.STA_IF)
 
@@ -17,17 +17,20 @@ if not sta_if.isconnected():
 
 print('network config:', sta_if.ifconfig())   
 
+# ****************************
+# ****************************
+# LINE NOTIFY IF IP ADDRESS CHANGE OR ONLINE
+
 from linenotify import Linenotify_API
 
-Lmsg =  Linenotify_API("INSERT YOUR TOKEN")
+Lmsg =  Linenotify_API("bd4mjCdTA9fbeG34gzGfbpLOQK5fU0ZzSX0DfegOoah")
 
 Lmsg.lineNotify(sta_if.ifconfig())
 
 
 # ****************************
 # ****************************
-# MODBUS API READ AND WRITE
-
+# MODBUS API READ AND WRITE 
 from  JGSmod import JGSmodbus_API
 
 mb= JGSmodbus_API(1) #slave_addr
@@ -60,10 +63,14 @@ def read_sensor2():
 
 # ****************************
 # ****************************
-# WEB SERVER
+#  OPTIMIZATION AND MEMORY MANAGEMENT
 import gc
 gc.collect()
 
+
+# ****************************
+# ****************************
+# WEB SERVER AND INTERFACE MODBUS
 import socket
 
 chl_state = 0
@@ -74,9 +81,7 @@ def web_page():
   else:
     gpio_state="OFF"
 
-#<p>Temp: <strong><span>""" + str(sensor_readings[0]) + """</span> </strong></p>  
-#<p>Hum: <strong><span>""" + str(sensor_readings[1]) + """</span></strong></p>
-    
+  
   html = """
 <html><head> <title>JGSEE Chiller Web Server</title> <meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="10">
   <link rel="icon" href="data:,"> <style>html{font-family: Helvetica; display:inline-block; margin: 0px auto; text-align: center;}
